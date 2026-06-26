@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --renk-metin: #0f172a;
+    --renk-metin-acik: #64748b;
+    --renk-arkaplan: #f1f5f9;
+    --renk-kart: #ffffff;
+    --renk-vurgu: #6366f1;
+    --renk-vurgu-koyu: #4f46e5;
+    --renk-header: rgba(15, 23, 42, 0.85);
+    --golge-hafif: 0 1px 3px rgba(15, 23, 42, 0.06);
+    --golge-kart: 0 4px 20px rgba(15, 23, 42, 0.08);
+    --golge-kart-hover: 0 16px 40px rgba(99, 102, 241, 0.18);
+    --radius-kart: 16px;
+    --gecis: 0.25s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, 'Segoe UI', sans-serif;
+    color: var(--renk-metin);
+    background: linear-gradient(160deg, #eef2ff 0%, var(--renk-arkaplan) 100%);
+    line-height: 1.6;
+}
+
+/* --- Navigasyon Bölümü (Sol Kenara Hizalandı - Madde 5) --- */
+header {
+    background-color: var(--renk-header);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav {
+    width: 100%;
+    padding: 1.25rem 2.5rem;
+}
+
+.nav-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color var(--gecis);
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* --- Ana İçerik Alanı (Madde 11) --- */
+main {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 7rem 1.5rem 4rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+#about {
+    text-align: center;
+    background-color: var(--renk-kart);
+    padding: 3rem 2rem;
+    border-radius: var(--radius-kart);
+    box-shadow: var(--golge-hafif);
+    border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+#about h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--renk-metin) 30%, var(--renk-vurgu));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#about p {
+    color: var(--renk-metin-acik);
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#projects h2,
+#contact h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.25rem;
+    color: var(--renk-metin);
+}
+
+#projects h2::after,
+#contact h2::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-top: 0.75rem;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--renk-vurgu), #a78bfa);
+}
+
+/* --- Kart Listesi ve Kartlar (Madde 8 & 9) --- */
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.card {
+    width: 225px;
+    padding: 0;
+    background-color: var(--renk-kart);
+    border-radius: var(--radius-kart);
+    box-shadow: var(--golge-kart);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform var(--gecis), box-shadow var(--gecis);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--golge-kart-hover);
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+    padding: 1.25rem 1.25rem 0.5rem;
+    color: var(--renk-metin);
+}
+
+.card p {
+    font-size: 0.8rem;
+    color: var(--renk-metin-acik);
+    line-height: 1.5;
+    padding: 0 1.25rem 1.25rem;
+    flex-grow: 1;
+}
+
+/* --- Düğme / Button Stilleri (Madde 10) --- */
+.btn {
+    display: block;
+    width: calc(100% - 2.5rem);
+    margin: 0 auto 1.25rem;
+    padding: 0.65rem 1rem;
+    background-color: var(--renk-vurgu);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--gecis), transform var(--gecis);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--renk-vurgu-koyu);
+    transform: translateY(-2px);
+}
+
+/* --- İletişim Bölümü Stilleri --- */
+#contact p {
+    color: var(--renk-metin-acik);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.contact-link {
+    display: inline-block;
+    color: var(--renk-vurgu);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color var(--gecis);
+}
+
+.contact-link:hover {
+    color: var(--renk-vurgu-koyu);
+    text-decoration: underline;
+}
+
+/* --- Footer Alanı (Madde 12) --- */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+    letter-spacing: 0.01em;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID vs Class Özgüllük</title>
+    <style>
+        .sinif {
+            color: green;
+        }
+
+        #kimlik {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Hangi renk görünür? → Mor (purple).
+    #kimlik seçicisinin özgüllüğü (1-0-0), .sinif seçicisinin özgüllüğünden (0-1-0) yüksektir.
+    ID seçicisi class seçicisine göre daha spesifik olduğu için #kimlik kuralı kazanır.
+    -->
+    <p id="kimlik" class="sinif">Bu paragrafın rengi özgüllük kurallarına göre belirlenir.</p>
+</body>
+</html>

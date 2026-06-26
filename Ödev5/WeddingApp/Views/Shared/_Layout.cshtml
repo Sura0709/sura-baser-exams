@@ -1,0 +1,70 @@
+@inject IConfiguration Configuration
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - @Configuration["SiteName"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WeddingApp.styles.css" asp-append-version="true" />
+</head>
+<body class="wedding-body">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light wedding-navbar">
+            <div class="container">
+                <a class="navbar-brand wedding-brand" asp-controller="Home" asp-action="Index">@Configuration["SiteName"]</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Menüyü aç">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Davetiye</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Rsvp" asp-action="Create">Katılım Bildir</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto align-items-sm-center gap-2">
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="btn btn-outline-wedding btn-sm" asp-controller="Admin" asp-action="Kayitlar">Kayıtlar</a>
+                            </li>
+                            <li class="nav-item">
+                                <form asp-controller="Admin" asp-action="Logout" method="post" class="d-inline">
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Çıkış</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-muted small" asp-controller="Admin" asp-action="Login">Yönetici</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container wedding-main">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="wedding-footer text-center">
+        <p class="mb-1">&copy; 2026 - @Configuration["SiteName"]</p>
+        <p class="mb-0">İletişim: <a href="mailto:@Configuration["Wedding:ContactEmail"]">@Configuration["Wedding:ContactEmail"]</a></p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

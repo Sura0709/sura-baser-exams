@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şura Başer — HTML/CSS Ödev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-content">
+                <a href="#about">Hakkında</a>
+                <a href="#projects">Projeler</a>
+                <a href="sura-baser-cv.pdf" target="_blank" rel="noopener noreferrer">Özgeçmiş</a>
+                <a href="#contact">İletişim</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>Merhaba, ben Şura Başer</h1>
+            <p>
+                Bu sayfa, HTML5 semantik yapısı ve CSS Flexbox kullanımını
+                göstermek için hazırladığım kişisel ödev sitemdir.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projeler</h2>
+            <div class="card-list">
+                <article class="card">
+                    <img src="https://placehold.co/280x160/2563eb/ffffff?text=Prompt+Engineering" alt="Prompt Engineering projesi görseli">
+                    <h3>Prompt Engineering for Generation Image from Text</h3>
+                    <p>Streamlit ve Python tabanlı, Gemini 2.5 Flash ve Imagen 4 modellerini entegre eden akıllı bir Prompt Optimizasyon arayüzü ve web platformu.</p>
+                    <button type="button" class="btn">İncele</button>
+                </article>
+
+                <article class="card">
+                    <img src="https://placehold.co/280x160/059669/ffffff?text=Sanal+Asistan" alt="Sanal Asistan Proje Yöneticisi görseli">
+                    <h3>Sanal Asistan Proje Yöneticisi</h3>
+                    <p>Python ile geliştirilen, arka planda JSON ve CSV veri yapılarını kullanan, modern bir arayüze ve sistematik iş akışına sahip görev planlama uygulaması.</p>
+                    <button type="button" class="btn">İncele</button>
+                </article>
+
+                <article class="card">
+                    <img src="https://placehold.co/280x160/d97706/ffffff?text=YazEtk+SQL" alt="YazEtk SQL Projesi görseli">
+                    <h3>YazEtk Gönüllü ve Etkinlik Yönetim Sistemi</h3>
+                    <p>MSSQL üzerinde tasarlanan; kategori, çalışanlar, etkinlikler ve gönüllü görevlendirmelerini ilişkisel yapıda dinamik olarak takip eden veritabanı projesi.</p>
+                    <button type="button" class="btn">İncele</button>
+                </article>
+
+                <article class="card">
+                    <img src="https://placehold.co/280x160/7c3aed/ffffff?text=Library+SQL" alt="Kütüphane Yönetim Sistemi görseli">
+                    <h3>InfotechLibraryDb Kütüphane Yönetimi</h3>
+                    <p>SQL Server üzerinde Transaction, Stored Procedure, View ve CTE yapıları kullanılarak veri bütünlüğü korunan gelişmiş bir kütüphane otomasyonu veritabanı.</p>
+                    <button type="button" class="btn">İncele</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>İletişim</h2>
+            <p>Projelerim hakkında detaylı bilgi almak veya benimle iletişime geçmek için e-posta gönderebilirsiniz:</p>
+            <a href="mailto:basersura@gmail.com" class="contact-link">basersura@gmail.com</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Şura Başer — Kişisel ödev sayfası</p>
+    </footer>
+</body>
+</html>

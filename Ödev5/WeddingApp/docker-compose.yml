@@ -1,0 +1,16 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: weddingapp-sqlserver
+    platform: linux/amd64
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "WeddingApp123!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - weddingapp_sqldata:/var/opt/mssql
+    restart: unless-stopped
+
+volumes:
+  weddingapp_sqldata:

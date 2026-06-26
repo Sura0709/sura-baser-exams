@@ -1,0 +1,6 @@
+ÖDEV NOTU
+
+-Ana sayfada (index.html) F12 ile Geliştirici Araçlarını açtım ve "Projeler" bölümündeki ilk kartın başlığına ("Prompt Engineering for Generation Image from Text" h3 öğesine) sağ tıklayıp İncele seçeneğiyle seçtim.
+-Styles sekmesinde color özelliğini incelediğimde, .card h3 kuralından gelen color: var(--renk-metin) (#0f172a) değerinin uygulandığını gördüm.
+-Evet, iptal edilmiş kurallar da vardı: tarayıcının varsayılan h3 stilindeki font-size (genellikle 1.17em) ve font-weight kuralları üstü çizili görünüyordu; çünkü .card h3 seçicisi bu varsayılan değerleri geçersiz kılıyordu.
+-Bu gözlem, daha özgül sınıf tabanlı kuralların genel ve kullanıcı aracısı stillerini nasıl ezip uygulandığını pratikte gösterdi.

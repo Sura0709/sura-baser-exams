@@ -1,0 +1,203 @@
+:root {
+  --wedding-bg: #f7f3eb;
+  --wedding-gold: #9a7b4f;
+  --wedding-gold-dark: #7d623d;
+  --wedding-card: #ffffff;
+  --wedding-tag-bg: #efe6d8;
+  --wedding-text: #4a4035;
+}
+
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body.wedding-body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--wedding-bg);
+  color: var(--wedding-text);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.wedding-navbar {
+  background-color: var(--wedding-bg) !important;
+  border-bottom: 1px solid #e8dfd0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.wedding-brand,
+.wedding-navbar .nav-link {
+  color: var(--wedding-gold) !important;
+  font-weight: 500;
+}
+
+.wedding-navbar .nav-link:hover,
+.wedding-brand:hover {
+  color: var(--wedding-gold-dark) !important;
+}
+
+.wedding-main {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.invitation-hero {
+  margin-bottom: 2rem;
+}
+
+.invitation-subtitle {
+  color: var(--wedding-gold);
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.invitation-names {
+  color: var(--wedding-gold);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.invitation-card {
+  max-width: 640px;
+  background: var(--wedding-card);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(122, 98, 61, 0.08);
+  padding: 2rem 2.25rem;
+}
+
+.invitation-message {
+  color: #6b5f52;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+.invitation-divider {
+  border-color: #eadfce;
+  opacity: 1;
+  margin: 1.5rem 0;
+}
+
+.invitation-details {
+  margin: 0;
+}
+
+.invitation-detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+}
+
+.invitation-detail-row dt {
+  font-weight: 600;
+  color: var(--wedding-gold);
+  margin: 0;
+}
+
+.invitation-detail-row dd {
+  margin: 0;
+  text-align: right;
+  color: #5c5248;
+}
+
+.invitation-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.invitation-tag {
+  background: var(--wedding-tag-bg);
+  color: var(--wedding-gold-dark);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.btn-wedding {
+  background-color: var(--wedding-gold);
+  border-color: var(--wedding-gold);
+  color: #fff;
+  padding: 0.65rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-wedding:hover,
+.btn-wedding:focus {
+  background-color: var(--wedding-gold-dark);
+  border-color: var(--wedding-gold-dark);
+  color: #fff;
+}
+
+.btn-outline-wedding {
+  color: var(--wedding-gold);
+  border-color: #d8c7ad;
+}
+
+.btn-outline-wedding:hover {
+  background-color: var(--wedding-tag-bg);
+  color: var(--wedding-gold-dark);
+  border-color: #d8c7ad;
+}
+
+.wedding-body .btn-primary {
+  background-color: var(--wedding-gold);
+  border-color: var(--wedding-gold);
+  color: #fff;
+}
+
+.wedding-body .btn-primary:hover,
+.wedding-body .btn-primary:focus,
+.wedding-body .btn-primary:active {
+  background-color: var(--wedding-gold-dark);
+  border-color: var(--wedding-gold-dark);
+  color: #fff;
+}
+
+.wedding-body .btn-outline-primary {
+  color: var(--wedding-gold);
+  border-color: #d8c7ad;
+}
+
+.wedding-body .btn-outline-primary:hover,
+.wedding-body .btn-outline-primary:focus,
+.wedding-body .btn-outline-primary:active {
+  background-color: var(--wedding-tag-bg);
+  color: var(--wedding-gold-dark);
+  border-color: #d8c7ad;
+}
+
+.wedding-footer {
+  padding: 2rem 1rem;
+  color: #8a7d6f;
+  font-size: 0.95rem;
+}
+
+.wedding-footer a {
+  color: var(--wedding-gold);
+  text-decoration: none;
+}
+
+.wedding-footer a:hover {
+  text-decoration: underline;
+}
+
+.btn:focus,
+.btn:active:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem rgba(154, 123, 79, 0.35);
+}

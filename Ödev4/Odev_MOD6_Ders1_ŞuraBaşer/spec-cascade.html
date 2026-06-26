@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascade Örneği</title>
+    <style>
+        .demo {
+            color: blue;
+        }
+
+        .demo {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Hangi kural kazanır ve neden? → İkinci .demo kuralı kazanır.
+    Her iki kuralın özgüllüğü aynıdır (0-1-0). Aynı özgüllükte çakışan kurallarda
+    cascade'ın kaynak sırası (source order) belirleyicidir: stylesheet içinde
+    daha sonra yazılan kural geçerli olur. Bu yüzden paragraf kırmızı görünür.
+    -->
+    <p class="demo">Bu paragrafın rengi cascade kurallarına göre belirlenir.</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline vs Class Özgüllük</title>
+    <style>
+        .metin {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Kazanan hangisi ve neden? → Inline style (style="color: teal;") kazanır.
+    Inline stillerin özgüllüğü (1-0-0-0), class seçicisinin özgüllüğünden (0-1-0) daha yüksektir.
+    Bu nedenle paragraf turuncu değil, teal (camgöbeği) renginde görünür.
+    -->
+    <p class="metin" style="color: teal;">Bu paragrafın rengi inline özgüllük kurallarına göre belirlenir.</p>
+</body>
+</html>

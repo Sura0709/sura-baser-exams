@@ -1,0 +1,72 @@
+@model WeddingApp.Models.RsvpResponse
+
+@{
+    ViewData["Title"] = "Katılım Bildir";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <h2 class="text-center mb-4">Katılım Formu</h2>
+        <p class="text-muted text-center mb-4">
+            Lütfen katılım bilgilerinizi eksiksiz doldurunuz.
+        </p>
+
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Phone" class="form-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="GuestCount" class="form-label"></label>
+                <input asp-for="GuestCount" class="form-control" type="number" min="1" max="20" />
+                <span asp-validation-for="GuestCount" class="text-danger"></span>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label d-block">@Html.DisplayNameFor(m => m.WillAttendMeal)</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="WillAttendMeal" id="mealYes" value="true" />
+                    <label class="form-check-label" for="mealYes">Yemeğe katılacağım</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" asp-for="WillAttendMeal" id="mealNo" value="false" />
+                    <label class="form-check-label" for="mealNo">Yemeğe katılmayacağım</label>
+                </div>
+                <span asp-validation-for="WillAttendMeal" class="text-danger"></span>
+            </div>
+
+            <div class="display-6">
+                <button type="submit" class="btn btn-wedding">Gönder</button>
+            </div>
+            <div class="display-6">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-wedding">Geri Dön</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

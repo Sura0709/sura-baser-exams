@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Düğün Davetiyesi";
+}
+
+<section class="invitation-hero text-center">
+    <p class="invitation-subtitle">MUTLU GÜNÜMÜZE DAVETLİSİNİZ</p>
+    <h1 class="invitation-names">@ViewBag.CoupleNames</h1>
+</section>
+
+<div class="invitation-card mx-auto">
+    <p class="invitation-message text-center">@ViewBag.WelcomeMessage</p>
+
+    <hr class="invitation-divider" />
+
+    <dl class="invitation-details">
+        <div class="invitation-detail-row">
+            <dt>Tarih</dt>
+            <dd>@ViewBag.Date</dd>
+        </div>
+        <div class="invitation-detail-row">
+            <dt>Mekan</dt>
+            <dd>@ViewBag.Venue</dd>
+        </div>
+        <div class="invitation-detail-row">
+            <dt>Adres</dt>
+            <dd>@ViewBag.Address</dd>
+        </div>
+    </dl>
+
+    <hr class="invitation-divider" />
+
+    <div class="invitation-tags text-center">
+        <span class="invitation-tag">Sevgi</span>
+        <span class="invitation-tag">Mutluluk</span>
+        <span class="invitation-tag">Birlik</span>
+    </div>
+
+    <div class="text-center mt-4">
+        <a asp-controller="Rsvp" asp-action="Create" class="btn btn-wedding">Katılım Bildir</a>
+    </div>
+</div>
