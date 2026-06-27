@@ -12,24 +12,3 @@ INSERT INTO "Authors" ("FirstName", "LastName", "Age") VALUES
     ('Franz', 'Kafka', 40);
 
 
--- YAZAR LİSTELEME
-SELECT * FROM "Authors";
-
--- DETAY
-SELECT * FROM "Authors"
-WHERE "Id" = 1; 
-
--- YENİ YAZAR EKLE
-INSERT INTO "Authors" ("FirstName", "LastName", "Age") VALUES 
-    ('Orhan', 'Pamuk', 71);
-
--- DÜZENLE
-UPDATE "Authors" SET 
-    "FirstName" = 'Güncellenmiş Ad',
-    "LastName" = 'Güncellenmiş Soyad',
-    "Age" = 50
-WHERE "Id" = 2; 
-
--- SİL
-DELETE FROM "Authors"
-WHERE "Id" = 3;

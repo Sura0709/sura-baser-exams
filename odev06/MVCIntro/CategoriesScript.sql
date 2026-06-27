@@ -10,18 +10,3 @@ INSERT INTO "Categories" ("Name", "Description") VALUES
     ('Edebiyat','Edebiyat açıklaması'),
     ('Bilim','Bilim açıklaması');
 
--- YENİ KATEGORİ EKLE
-INSERT INTO "Categories" ("Name", "Description") VALUES 
-    ('Tarih', 'Tarih açıklaması');
-
--- DETAY
-SELECT * FROM "Categories" WHERE "Id" = 1;
-
--- SİL
-DELETE FROM "Categories" WHERE "Id" = 2;
-
--- DÜZENLE
-UPDATE "Categories" SET 
-    "Name" = 'Roman',
-    "Description" = 'Roman açıklaması 2'
-WHERE "Id" = 3;

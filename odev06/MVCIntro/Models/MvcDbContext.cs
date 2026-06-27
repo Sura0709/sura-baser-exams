@@ -18,6 +18,7 @@ public partial class MvcDbContext : DbContext
     public virtual DbSet<Book> Books { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
+    public virtual DbSet<Author> Authors { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseNpgsql("Host=localhost;Port=5450;Database=MVC_DB;Username=mvc;Password=postgres;");

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/surabaser/Desktop/EĞİTİM/26-06-26/MVCIntro/MVCIntro.csproj": {}
+    "/Users/surabaser/Desktop/sura-baser-exams/odev06/MVCIntro/MVCIntro.csproj": {}
   },
   "projects": {
-    "/Users/surabaser/Desktop/EĞİTİM/26-06-26/MVCIntro/MVCIntro.csproj": {
+    "/Users/surabaser/Desktop/sura-baser-exams/odev06/MVCIntro/MVCIntro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/surabaser/Desktop/EĞİTİM/26-06-26/MVCIntro/MVCIntro.csproj",
+        "projectUniqueName": "/Users/surabaser/Desktop/sura-baser-exams/odev06/MVCIntro/MVCIntro.csproj",
         "projectName": "MVCIntro",
-        "projectPath": "/Users/surabaser/Desktop/EĞİTİM/26-06-26/MVCIntro/MVCIntro.csproj",
+        "projectPath": "/Users/surabaser/Desktop/sura-baser-exams/odev06/MVCIntro/MVCIntro.csproj",
         "packagesPath": "/Users/surabaser/.nuget/packages/",
-        "outputPath": "/Users/surabaser/Desktop/EĞİTİM/26-06-26/MVCIntro/obj/",
+        "outputPath": "/Users/surabaser/Desktop/sura-baser-exams/odev06/MVCIntro/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/surabaser/.nuget/NuGet/NuGet.Config"
